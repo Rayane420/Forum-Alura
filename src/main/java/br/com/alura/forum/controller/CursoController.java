@@ -1,6 +1,7 @@
 package br.com.alura.forum.controller;
 
 import br.com.alura.forum.controller.dto.CursoDto;
+import br.com.alura.forum.controller.dto.DetalhesCursoDto;
 import br.com.alura.forum.controller.form.CursoForm;
 import br.com.alura.forum.modelo.Curso;
 import br.com.alura.forum.repository.CursoRepository;
@@ -25,7 +26,15 @@ public class CursoController {
         return CursoDto.converter(cursos);
     }
 
-    //TODO cadastrar cursos
+    //Detalhando curso
+    /*@GetMapping("/{id}")
+    public DetalhesCursoDto detalhar(@PathVariable Long id){
+        Curso curso = cursoRepository.getOne(id);
+        return new CursoDto(curso);
+    }*/
+
+
+    //cadastrar cursos
     @PostMapping
     public ResponseEntity<CursoDto> cadastrar(@RequestBody CursoForm cursoForm, UriComponentsBuilder uriComponentsBuilder){
         Curso curso = cursoForm.converter(cursoRepository);

@@ -1,7 +1,11 @@
 package br.com.alura.forum.controller;
 
+import br.com.alura.forum.controller.dto.CursoDto;
+import br.com.alura.forum.controller.dto.DetalhesCursoDto;
+import br.com.alura.forum.controller.dto.DetalhesTopicoDto;
 import br.com.alura.forum.controller.dto.TopicoDto;
 import br.com.alura.forum.controller.form.TopicoForm;
+import br.com.alura.forum.modelo.Curso;
 import br.com.alura.forum.modelo.Topico;
 import br.com.alura.forum.repository.CursoRepository;
 import br.com.alura.forum.repository.TopicoRepository;
@@ -28,6 +32,13 @@ public class TopicosController {
     public List<TopicoDto> lista(){
     List<Topico> topicos = topicoRepository.findAll();
         return TopicoDto.converter(topicos);
+    }
+
+    //Detalhando topico
+    @GetMapping("/{id}")
+    public DetalhesTopicoDto detalhar(@PathVariable Long id){
+        Topico topico = topicoRepository.getOne(id);
+        return new DetalhesTopicoDto(topico);
     }
 
     @PostMapping

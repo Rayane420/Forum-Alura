@@ -1,24 +1,31 @@
 package br.com.alura.forum.controller.dto;
 
+import br.com.alura.forum.modelo.StatusTopico;
 import br.com.alura.forum.modelo.Topico;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
-public class TopicoDto {
-
+public class DetalhesTopicoDto {
     private Long id;
     private String titulo;
     private String mensagem;
     private LocalDateTime dataCriacao = LocalDateTime.now();
+    private String nomeAutor;
+    private StatusTopico status;
+    private List<RespostaDto> respostas;
 
-    public TopicoDto(Topico topico){
+    public DetalhesTopicoDto(Topico topico){
         this.id = topico.getId();
         this.titulo = topico.getTitulo();
         this.mensagem = topico.getMensagem();
         this.dataCriacao = topico.getDataCriacao();
+        this.nomeAutor = topico.getAutor().getNome();
+        this.status = topico.getStatus();
+        this.respostas = new ArrayList<>();
+        this.respostas.addAll(topico.getRespostas().stream().map(RespostaDto::new).collect(Collectors.toList()));
     }
 
     public Long getId() {
@@ -53,8 +60,27 @@ public class TopicoDto {
         this.dataCriacao = dataCriacao;
     }
 
-    //convertendo lista de topicos em lista de topicosDto
-    public static List<TopicoDto> converter(List<Topico> topicos){
-        return topicos.stream().map(TopicoDto::new).collect(Collectors.toList());
+    public String getNomeAutor() {
+        return nomeAutor;
+    }
+
+    public void setNomeAutor(String nomeAutor) {
+        this.nomeAutor = nomeAutor;
+    }
+
+    public StatusTopico getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusTopico status) {
+        this.status = status;
+    }
+
+    public List<RespostaDto> getRespostas() {
+        return respostas;
+    }
+
+    public void setRespostas(List<RespostaDto> respostas) {
+        this.respostas = respostas;
     }
 }
