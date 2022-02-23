@@ -27,11 +27,11 @@ public class CursoController {
     }
 
     //Detalhando curso
-    /*@GetMapping("/{id}")
-    public DetalhesCursoDto detalhar(@PathVariable Long id){
+    @GetMapping("/{id}")
+    public CursoDto detalhar(@PathVariable Long id){
         Curso curso = cursoRepository.getOne(id);
         return new CursoDto(curso);
-    }*/
+    }
 
 
     //cadastrar cursos
