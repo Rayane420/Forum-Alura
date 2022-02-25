@@ -35,4 +35,12 @@ public class CursoForm {
         return new Curso(nome, categoria);
     }
 
+    public Curso atualizar(Long id, CursoRepository cursoRepository) {
+        Curso curso = cursoRepository.getOne(id);
+
+        curso.setNome(this.nome);
+        curso.setCategoria(this.categoria);
+
+        return curso;
+    }
 }

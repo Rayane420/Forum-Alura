@@ -3,12 +3,14 @@ package br.com.alura.forum.controller;
 import br.com.alura.forum.controller.dto.CursoDto;
 import br.com.alura.forum.controller.form.CursoForm;
 import br.com.alura.forum.modelo.Curso;
+import br.com.alura.forum.modelo.Topico;
 import br.com.alura.forum.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
@@ -48,9 +50,11 @@ public class CursoController {
 
     //Atualizar
     @PutMapping("/{id}")
-    public ResponseEntity<CursoDto> atualizar(@PathVariable Long id){
+    @Transactional
+    public ResponseEntity<CursoDto> atualizar(@PathVariable Long id, @RequestBody @Valid CursoForm form){
+        Curso curso = form.atualizar(id, cursoRepository);
 
-
+        return ResponseEntity.ok(new CursoDto(curso));
     }
 
 
