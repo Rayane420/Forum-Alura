@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -19,22 +20,23 @@ public class CursoController {
     @Autowired
     private CursoRepository cursoRepository;
 
+    //Listar
     @GetMapping
     public List<CursoDto>lista(){
         List<Curso> cursos = cursoRepository.findAll();
         return CursoDto.converter(cursos);
     }
 
-    //Detalhando curso
+    //Detalhar por id
     @GetMapping("/{id}")
     public CursoDto detalhar(@PathVariable Long id){
         Curso curso = cursoRepository.getOne(id);
         return new CursoDto(curso);
     }
 
-    //cadastrar cursos
+    //Cadastrar
     @PostMapping
-    public ResponseEntity<CursoDto> cadastrar(@RequestBody CursoForm cursoForm, UriComponentsBuilder uriComponentsBuilder){
+    public ResponseEntity<CursoDto> cadastrar(@RequestBody @Valid CursoForm cursoForm, UriComponentsBuilder uriComponentsBuilder){
         Curso curso = cursoForm.converter(cursoRepository);
         cursoRepository.save(curso);
 
@@ -43,5 +45,13 @@ public class CursoController {
         return ResponseEntity.created(uri).body(new CursoDto(curso));
 
     }
+
+    //Atualizar
+    @PutMapping("/{id}")
+    public ResponseEntity<CursoDto> atualizar(@PathVariable Long id){
+
+
+    }
+
 
 }
