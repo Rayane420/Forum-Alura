@@ -1,9 +1,9 @@
 package br.com.alura.forum.controller;
 
 import br.com.alura.forum.controller.dto.CursoDto;
+import br.com.alura.forum.controller.dto.TopicoDto;
 import br.com.alura.forum.controller.form.CursoForm;
 import br.com.alura.forum.modelo.Curso;
-import br.com.alura.forum.modelo.Topico;
 import br.com.alura.forum.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -56,6 +56,9 @@ public class CursoController {
 
         return ResponseEntity.ok(new CursoDto(curso));
     }
+
+    //Deletar
+
 
 
 }
