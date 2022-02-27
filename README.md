@@ -41,7 +41,7 @@ Para ter uma cópia desse projeto na sua máquina basta executar a linha de coma
 git clone https://github.com/Rayane420/Forum-Alura.git
 ```
 
-### 🤔 Como contribuir
+### Para contribuir
 
 1. Faça um fork do repositório;
 2. Crie uma nova branch com a sua feature/funcionalidade: git checkout -b nova-feature;
