@@ -1,7 +1,6 @@
 package br.com.alura.forum.controller;
 
 import br.com.alura.forum.controller.dto.CursoDto;
-import br.com.alura.forum.controller.dto.TopicoDto;
 import br.com.alura.forum.controller.form.CursoForm;
 import br.com.alura.forum.modelo.Curso;
 import br.com.alura.forum.repository.CursoRepository;
@@ -58,7 +57,12 @@ public class CursoController {
     }
 
     //Deletar
-
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<?> remover(@PathVariable Long id){
+        cursoRepository.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
 
 
 }
