@@ -13,7 +13,7 @@ Nesse fórum vamos ter os tópicos abertos pelos alunos (os tópicos têm o stat
 > *"O diagrama de caso de uso resume os detalhes dos usuários do sistema (também conhecidos como atores) e as interações deles com o sistema."*
 <br>  
 
-![Imagem do diagrama de caso de uso do projeto](https://github.com/Rayane420/Forum-Alura/blob/master/docs/diagramaCasoDeUso.svg)
+![Imagem do diagrama de caso de uso do projeto](https://github.com/Rayane420/Forum-Alura/blob/master/docs/diagramaDeCasoDeUso.svg)
 
 
 
