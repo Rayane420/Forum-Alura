@@ -43,10 +43,10 @@ git clone https://github.com/Rayane420/Forum-Alura.git
 
 ### Para contribuir
 
-1. Faça um fork do repositório;
-2. Crie uma nova branch com a sua feature/funcionalidade: git checkout -b nova-feature;
-3. Faça commit das suas alterações: git commit -m 'feat: Informar a Nova funcionalidade adicionada';
-4. Faça push para a sua branch: git push origin nova-feature.
+1. Faça um fork do repositório
+2. Crie uma nova branch com a sua feature/funcionalidade: ```git checkout -b nova-feature```
+3. Faça commit das suas alterações: ```git commit -m 'feat: Informar a Nova funcionalidade adicionada'``` 
+4. Faça push para a sua branch: ```git push origin nova-feature```
 
 
 ### 📭Caso você encontre um bug/ponto de melhoria nessa aplicação
