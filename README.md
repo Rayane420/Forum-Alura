@@ -2,6 +2,7 @@
 API do Fórum da Alura
 
 Projeto desenvolvido no curso de Api rest da Alura
+![Imagem Forum alura](https://github.com/Rayane420/Forum-Alura/blob/master/ForumAlura.png)
 
 **Objetivo:** Desenvolver forum da alura com categorias de cursos (como Mobile, Programação e Front-end) e, dentro de cada categoria, estão os cursos, onde os alunos podem postar as dúvidas. 
 Basicamente é criado um novo tópico com um título e uma descrição da dúvida. 
