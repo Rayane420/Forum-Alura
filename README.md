@@ -1,10 +1,14 @@
 ### Forum-Alura
 API do Fórum da Alura
 
-Projeto desenvolvido no curso de Api rest da Alura
-![Imagem Forum alura](https://github.com/Rayane420/Forum-Alura/blob/master/ForumAlura.png)
+Projeto desenvolvido no curso de Spring Boot Api rest da Alura <br>
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=%20CONCLUÍDO&color=GREEN&style=for-the-badge)<br>
+<img src="https://github.com/Rayane420/Forum-Alura/blob/master/ForumAlura.png" width="40%" height="30%"/> 
+![GitHub Org's stars](https://img.shields.io/github/stars/Rayane420?style=social)
 
-**Objetivo:** Desenvolver forum da alura com categorias de cursos (como Mobile, Programação e Front-end) e, dentro de cada categoria, estão os cursos, onde os alunos podem postar as dúvidas. 
+**Objetivo:** 
+<br>
+Desenvolver forum da alura com categorias de cursos (como Mobile, Programação e Front-end) e, dentro de cada categoria, estão os cursos, onde os alunos podem postar as dúvidas. 
 Basicamente é criado um novo tópico com um título e uma descrição da dúvida. 
 Aparece também o aluno que postou a dúvida, a data, e outros alunos podem responder. 
 
@@ -14,14 +18,16 @@ Nesse fórum vamos ter os tópicos abertos pelos alunos (os tópicos têm o stat
 > *"O diagrama de caso de uso resume os detalhes dos usuários do sistema (também conhecidos como atores) e as interações deles com o sistema."*
 <br>  
 
-![Imagem do diagrama de caso de uso do projeto](https://github.com/Rayane420/Forum-Alura/blob/master/docs/diagramaDeCasoDeUso.svg)
+<img src="https://github.com/Rayane420/Forum-Alura/blob/master/docs/diagramaDeCasoDeUso.svg" width="30%" height="30%"/> 
 
 
 
 ### 🚀Tecnologias utilizadas:
-- [ ] Java
-- [ ] Spring Boot
-- [ ] Banco de dados H2
+✅ Java
+
+✅ Spring Boot
+
+✅ Banco de dados H2
 
 
 
@@ -45,9 +51,10 @@ git clone https://github.com/Rayane420/Forum-Alura.git
 ### Para contribuir
 
 1. Faça um fork do repositório
-2. Crie uma nova branch com a sua feature/funcionalidade: ```git checkout -b nova-feature```
-3. Faça commit das suas alterações: ```git commit -m 'feat: Informar a Nova funcionalidade adicionada'``` 
-4. Faça push para a sua branch: ```git push origin nova-feature```
+2. No fork que irá aparecer no seu repositório faça um clone para sua máquina ```git clone link-do-projeto```
+3. Faça as alterações na IDE da sua preferência
+4. Commit ```git commit -m 'Informar a Nova funcionalidade adicionada'``` e faça o push das suas alterações ```git push```
+6. Após isso faça o pull request e a sua contribuição será analisada e posteriormente adicionada ao projeto
 
 
 ### 📭Caso você encontre um bug/ponto de melhoria nessa aplicação
