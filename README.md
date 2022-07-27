@@ -1,10 +1,14 @@
-### Forum-Alura
-API do Fórum da Alura
+### API - Fórum da Alura
 
-Projeto desenvolvido no curso de Spring Boot Api rest da Alura <br>
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=%20CONCLUÍDO&color=GREEN&style=for-the-badge)<br>
+![STATUS](https://img.shields.io/badge/Status-%20Concluído-brightgreen)
+![java-version](https://img.shields.io/badge/language-Java-red)
+![api](https://img.shields.io/badge/framework-Spring-green)<br>
+
+
 <img src="https://github.com/Rayane420/Forum-Alura/blob/master/ForumAlura.png" width="40%" height="30%"/> 
+
 ![GitHub Org's stars](https://img.shields.io/github/stars/Rayane420?style=social)
+
 
 **Objetivo:** 
 <br>
@@ -27,9 +31,11 @@ Nesse fórum vamos ter os tópicos abertos pelos alunos (os tópicos têm o stat
 
 ✅ Spring Boot
 
+✅ Spring Data JPA
+
+✅ Validação com Bean Validation
+
 ✅ Banco de dados H2
-
-
 
 
 ### 🚨🔧Pré-requisitos 
